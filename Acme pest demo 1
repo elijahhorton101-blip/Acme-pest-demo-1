@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Acme Pest Control Co., Inc. - Carolinas Business of the Year! Family-owned since 1946. Complete bug elimination, crawl space encapsulations, rodent control, and wildlife management across NC & SC. Call 704-786-4166.">
+<title>Acme Pest Control | Protecting Your Home. Earning Your Trust. Since 1946</title>
+<style>
+:root {
+  --orange: #f45a0a;
+  --orange-hover: #d94a00;
+  --dark-bg: #090a0c;
+  --panel-bg: #131518;
+  --card-bg: #1a1d21;
+  --text-light: #f1f3f5;
+  --text-muted: #9ba3af;
+  --border-color: #272b30;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text-light); background: var(--dark-bg); line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+
+.wrap { width: min(1240px, 92%); margin: auto; }
+
+/* Sticky Header */
+.header { background: rgba(9, 10, 12, 0.95); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
+.nav { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-icon { width: 44px; height: 44px; background: var(--orange); border-radius: 8px; display: grid; place-items: center; color: #fff; font-weight: 900; font-size: 1.5rem; }
+.brand strong { display: block; font-size: 1.55rem; letter-spacing: 0.04em; line-height: 1; color: #fff; }
+.brand small { display: block; color: var(--orange); font-weight: 800; letter-spacing: 0.16em; font-size: 0.65rem; margin-top: 4px; }
+
+.navlinks { display: flex; gap: 24px; align-items: center; }
+.navlinks a { color: #d0d5dd; font-weight: 600; font-size: 0.92rem; transition: 0.2s; }
+.navlinks a:hover { color: var(--orange); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 6px; padding: 14px 26px; font-size: 1rem; font-weight: 800; border: 1px solid var(--orange); background: var(--orange); color: white; cursor: pointer; transition: all 0.2s ease; text-transform: uppercase; letter-spacing: 0.03em; }
+.btn:hover { background: var(--orange-hover); border-color: var(--orange-hover); }
+.btn.outline { background: transparent; color: #fff; border-color: #fff; }
+.btn.outline:hover { background: #fff; color: var(--dark-bg); }
+.btn.btn-call { background: var(--orange); border-color: var(--orange); border-radius: 50px; padding: 10px 22px; }
+
+.menu-toggle { display: none; background: var(--orange); border: none; color: #fff; padding: 8px 14px; border-radius: 6px; font-weight: 800; cursor: pointer; }
+
+/* Hero Section */
+.hero { background: linear-gradient(180deg, rgba(9,10,12,0.6) 0%, rgba(9,10,12,0.95) 100%), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; padding: 50px 0 60px; border-bottom: 1px solid var(--border-color); }
+.hero-header-line { display: flex; align-items: center; gap: 10px; color: var(--orange); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; }
+.hero h1 { font-size: clamp(2.4rem, 4.2vw, 3.8rem); line-height: 1.05; margin: 0 0 16px; font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; color: #ffffff; }
+.hero p { font-size: 1.05rem; color: #cbd5e1; margin-bottom: 24px; max-width: 500px; line-height: 1.6; }
+.hero-cta-box { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+
+/* Real Truck Visual Stage */
+.hero-truck-stage { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.8); background: #111; }
+.truck-img-wrapper { position: relative; width: 100%; height: 380px; overflow: hidden; }
+.truck-img-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.95) contrast(1.05); }
+.truck-badge-overlay { position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.85); border: 1px solid var(--orange); border-radius: 6px; padding: 8px 14px; color: #fff; text-align: right; }
+.truck-badge-overlay strong { display: block; font-size: 0.85rem; color: var(--orange); letter-spacing: 0.05em; text-transform: uppercase; }
+.truck-badge-overlay span { font-size: 0.72rem; color: #ccc; }
+
+/* Hero Services Grid (6 Cards) */
+.hero-services-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 30px; }
+.hero-service-card { background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 18px 12px; text-align: center; transition: 0.2s; }
+.hero-service-card:hover { border-color: var(--orange); background: rgba(244,90,10,0.06); }
+.hero-service-card svg { width: 28px; height: 28px; fill: var(--orange); margin-bottom: 8px; }
+.hero-service-card h4 { margin: 0 0 4px; font-size: 0.9rem; color: #fff; font-weight: 800; }
+.hero-service-card p { margin: 0; font-size: 0.72rem; color: var(--text-muted); line-height: 1.3; }
+
+/* Our Story Section */
+.story-section { padding: 60px 0; border-bottom: 1px solid var(--border-color); }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.story-img-box { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); }
+.story-img-box img { width: 100%; height: 340px; object-fit: cover; filter: grayscale(80%) contrast(1.1); display: block; }
+.story-header { color: var(--orange); font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.story-content h2 { font-size: 2rem; text-transform: uppercase; margin: 0 0 14px; color: #fff; }
+.story-content p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 18px; }
+.story-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+.story-card { background: var(--panel-bg); border: 1px solid var(--border-color); padding: 14px; border-radius: 6px; display: flex; align-items: center; gap: 12px; }
+.story-card svg { width: 24px; height: 24px; fill: var(--orange); flex: 0 0 24px; }
+.story-card div strong { display: block; font-size: 0.88rem; color: #fff; }
+.story-card div small { font-size: 0.75rem; color: var(--text-muted); }
+
+/* Protection & Full Services Split */
+.protection-section { padding: 60px 0; border-bottom: 1px solid var(--border-color); background: #0c0d10; }
+.protection-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+.protection-img-box { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); }
+.protection-img-box img { width: 100%; height: 360px; object-fit: cover; display: block; }
+.services-list-panel { background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 28px; }
+.services-list-panel h3 { font-size: 1.3rem; margin-top: 0; color: #fff; text-transform: uppercase; margin-bottom: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+.checklist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.checklist-item { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #e2e8f0; }
+.checklist-item svg { width: 16px; height: 16px; fill: var(--orange); flex: 0 0 16px; }
+
+/* Service Areas & Reviews */
+.areas-reviews-section { padding: 60px 0; border-bottom: 1px solid var(--border-color); }
+.split-two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.section-subhead { color: var(--orange); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.section-title-sm { font-size: 1.6rem; text-transform: uppercase; margin: 0 0 20px; color: #fff; }
+
+.counties-box { background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; margin-bottom: 15px; }
+.counties-box h4 { margin: 0 0 8px; color: var(--orange); font-size: 0.95rem; text-transform: uppercase; }
+.counties-box p { margin: 0; color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; }
+
+.reviews-stack { display: grid; gap: 14px; }
+.review-item { background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 18px; }
+.review-stars { color: #f59e0b; font-size: 0.9rem; margin-bottom: 6px; }
+.review-item p { margin: 0 0 8px; font-size: 0.88rem; color: #cbd5e1; font-style: italic; }
+.review-item strong { font-size: 0.82rem; color: #fff; }
+
+/* Contact CTA Banner */
+.cta-banner { padding: 50px 0; background: linear-gradient(90deg, #131518 0%, #1a1d21 100%); border-bottom: 1px solid var(--border-color); }
+.cta-flex { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cta-info h3 { font-size: 1.8rem; margin: 0 0 6px; text-transform: uppercase; color: #fff; }
+.cta-info p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+/* Footer */
+.footer { background: #060708; padding: 35px 0 20px; font-size: 0.82rem; color: var(--text-muted); }
+.footer-flex { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px; }
+
+@media (max-width: 1024px) {
+  .hero-services-grid { grid-template-columns: repeat(3, 1fr); }
+  .protection-grid, .story-grid, .split-two { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .navlinks { display: none; }
+  .menu-toggle { display: block; }
+  .navlinks.open { display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: #090a0c; padding: 20px; border-bottom: 2px solid var(--orange); }
+}
+</style>
+</head>
+<body>
+
+<!-- Header Navigation -->
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <div class="brand-icon">A</div>
+      <div>
+        <strong>ACME</strong>
+        <small>PEST CONTROL CO., INC.</small>
+      </div>
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()">Menu ☰</button>
+    <nav class="navlinks" id="navMenu">
+      <a href="#services">Services</a>
+      <a href="#story">Our Story</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-call" href="tel:7047864166">☎ 704-786-4166</a>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-header-line">
+            <span>FAMILY OWNED & OPERATED</span> • <span>SINCE 1946</span>
+          </div>
+          <h1>PROTECTING YOUR HOME.<br>EARNING YOUR TRUST.</h1>
+          <p>For nearly 80 years, Acme Pest Control Co., Inc. has been a family-owned business providing the Piedmont region with reliable pest control and complete home and business protection.</p>
+          
+          <div class="hero-cta-box">
+            <a class="btn" href="#contact">Schedule Service →</a>
+            <a class="btn outline" href="tel:7047864166">Call 704-786-4166</a>
+          </div>
+
+          <div style="font-size: 0.8rem; color: #94a3b8; display: flex; gap: 15px;">
+            <span>✓ Licensed in NC & SC</span>
+            <span>✓ Family Owned Since 1946</span>
+          </div>
+        </div>
+
+        <!-- Photorealistic White Chevy Silverado Trail Boss Truck Visual -->
+        <div class="hero-truck-stage">
+          <div class="truck-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80" alt="White 2026 Chevy Silverado 1500 Trail Boss Fleet Truck">
+            <div class="truck-badge-overlay">
+              <strong>NEW 2026 CHEVY TRAIL BOSS</strong>
+              <span>Equipped for safe, rapid local service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero 6-Service Feature Row -->
+      <div class="hero-services-grid" id="services">
+        <div class="hero-service-card">
+          <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <h4>Pest Control</h4>
+          <p>Keep your home and business free from unwanted pests.</p>
+        </div>
+        <div class="hero-service-card">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          <h4>Termites</h4>
+          <p>Protect your property from hidden structural threats.</p>
+        </div>
+        <div class="hero-service-card">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <h4>Mosquitoes</h4>
+          <p>Enjoy your outdoor spaces without the bites.</p>
+        </div>
+        <div class="hero-service-card">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          <h4>Rodents & Wildlife</h4>
+          <p>Keep rodents and wildlife out where they belong.</p>
+        </div>
+        <div class="hero-service-card">
+          <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+          <h4>Crawl Space & Moisture</h4>
+          <p>Improve air quality and protect home from moisture issues.</p>
+        </div>
+        <div class="hero-service-card">
+          <svg viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
+          <h4>Radon Testing</h4>
+          <p>Know what's in your air. Protect your family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="story-section" id="story">
+    <div class="wrap story-grid">
+      <div class="story-img-box">
+        <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80" alt="Vintage Acme Truck Since 1946">
+      </div>
+      <div class="story-content">
+        <div class="story-header">/// OUR STORY</div>
+        <h2>LOCAL ROOTS. GENERATIONS OF EXPERIENCE. <span>SINCE 1946</span></h2>
+        <p>Acme Pest Control Co., Inc. has been a family-owned and operated business for nearly 80 years, proudly serving the Piedmont region. What started as a small, local operation has grown into a trusted name in pest control, termite protection, and crawl space solutions—all built on the same values we had since day one: hard work, honesty, and commitment to our community.</p>
+        
+        <div class="story-highlights">
+          <div class="story-card">
+            <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+            <div>
+              <strong>Serving Since 1946</strong>
+              <small>Established local experience</small>
+            </div>
+          </div>
+          <div class="story-card">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <div>
+              <strong>Residential & Commercial</strong>
+              <small>Full property coverage</small>
+            </div>
+          </div>
+          <div class="story-card">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            <div>
+              <strong>Licensed in NC & SC</strong>
+              <small>Carolinas Business of the Year</small>
+            </div>
+          </div>
+          <div class="story-card">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <div>
+              <strong>Family Owned & Operated</strong>
+              <small>Dedicated local support</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Pest & Property Protection -->
+  <section class="protection-section">
+    <div class="wrap protection-grid">
+      <div class="protection-img-box">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80" alt="Protected Home Exterior">
+      </div>
+      <div class="services-list-panel">
+        <div class="story-header">/// OUR SERVICES</div>
+        <h3>COMPLETE PEST & PROPERTY PROTECTION</h3>
+        <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:20px;">From everyday pest control to specialized services, we have the solution to keep your home or business safe, healthy, and protected.</p>
+        
+        <div class="checklist-grid">
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Pest Control</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Termite Control</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Mosquito Control</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Rodent & Wildlife</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Crawl Space Encapsulation</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Dehumidifiers</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Radon Testing</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Sanitation Services</div>
+          <div class="checklist-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Spray Foam Insulation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas & Reviews Split -->
+  <section class="areas-reviews-section">
+    <div class="wrap split-two">
+      <!-- Areas -->
+      <div id="areas">
+        <div class="section-subhead">/// SERVICE AREAS</div>
+        <h3 class="section-title-sm">PROUDLY SERVING THE PIEDMONT REGION</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:18px;">We provide pest control and property protection throughout North Carolina and South Carolina, including:</p>
+
+        <div class="counties-box">
+          <h4>NC COUNTIES</h4>
+          <p>Cabarrus | Cabarrus | Gaston | Iredell | Lincoln | Mecklenburg | Rowan | Stanly | Union</p>
+        </div>
+
+        <div class="counties-box">
+          <h4>SC COUNTIES</h4>
+          <p>Chester | Lancaster | York</p>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+      <div id="reviews">
+        <div class="section-subhead">/// WHAT OUR CUSTOMERS SAY</div>
+        <h3 class="section-title-sm">REAL REVIEWS. REAL PEOPLE.</h3>
+
+        <div class="reviews-stack">
+          <div class="review-item">
+            <div class="review-stars">★★★★★</div>
+            <p>“Very professional and always on time. We've used them for years and highly recommend them!”</p>
+            <strong>— Amanda R.</strong>
+          </div>
+          <div class="review-item">
+            <div class="review-stars">★★★★★</div>
+            <p>“The team at Acme is knowledgeable, friendly, and gets the job done. Couldn't be happier!”</p>
+            <strong>— James T.</strong>
+          </div>
+          <div class="review-item">
+            <div class="review-stars">★★★★★</div>
+            <p>“Best pest control company around! They take care of our home and business.”</p>
+            <strong>— Sarah L.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Banner -->
+  <section class="cta-banner" id="contact">
+    <div class="wrap cta-flex">
+      <div class="cta-info">
+        <h3>READY TO SCHEDULE SERVICE?</h3>
+        <p>Call or schedule online today for fast, friendly local service.</p>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn" href="tel:7047864166">Call 704-786-4166</a>
+        <a class="btn outline" href="mailto:acmepest@acmepcc.com">Email Us Direct</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-flex">
+      <div>
+        <strong style="color:#fff; font-size:1.1rem; display:block;">ACME PEST CONTROL CO., INC.</strong>
+        <span>575 Dickens Place NE, Concord, NC 28025</span>
+      </div>
+      <div>
+        <span>Mon–Fri: 7:30 AM–5:00 PM | Sat: By Appt</span>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      © Acme Pest Control Co., Inc. All Rights Reserved. Licensed in NC & SC.
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('navMenu');
+  menu.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
